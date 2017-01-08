@@ -5,7 +5,7 @@ var useragent = require('express-useragent');
 app.use(useragent.express());
 app.get('/', function(req, res){
   var result = {
-    "ipaddress" : req.headers['x-forwarded-for'], //req.connection.remoteAddress,
+    "ipaddress" : req.headers['x-forwarded-for'],
     "language" : req.acceptsLanguages()[0],
     "os" : req.useragent.os
   }
