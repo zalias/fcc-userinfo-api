@@ -11,4 +11,7 @@ app.get('/', function(req, res){
   }
   res.send(result);
 });
-app.listen(8080);
+
+app.listen(process.env.PORT || 8080, function () {
+  console.log('App listening at ', process.env.PORT);
+});
